@@ -7,7 +7,8 @@ defmodule RocketpayWeb.Router do
 
   scope "/api", RocketpayWeb do
     pipe_through(:api)
-    get("/:filename", WelcomeController, :index)
+    get("/:filename", WelcomeController, :index) # Test
+    post "/users", UsersController, :create  # Insert user via POST using schema
   end
 
   # Enables LiveDashboard only for development
